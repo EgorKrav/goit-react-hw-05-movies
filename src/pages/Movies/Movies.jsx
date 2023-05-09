@@ -42,7 +42,9 @@ const Movies = () => {
       <FormDiv>
         <Form onSubmit={handleSubmit}>
           <Input type="text" value={query} onChange={onChange} />
-          <Button type="submit">search</Button>
+          <Button type="submit" disabled={!query}>
+            search
+          </Button>
         </Form>
       </FormDiv>
       {movies.length > 0 && (
